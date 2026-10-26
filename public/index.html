@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Etalase Produk</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <span class="brand">Etalase</span>
+      <nav class="nav" aria-label="Navigasi utama">
+        <a href="index.html" aria-current="page">Etalase</a>
+        <a href="form.html">Caption</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="page-head">
+      <h1>Etalase produk</h1>
+      <p>Telusuri produk dari DummyJSON. Cari berdasarkan nama atau saring per kategori.</p>
+    </div>
+
+    <div class="toolbar">
+      <input type="search" id="search" placeholder="Cari produk…" aria-label="Cari produk">
+      <select id="category" aria-label="Filter kategori"><option value="">Semua kategori</option></select>
+    </div>
+    <p class="count" id="count" aria-live="polite"></p>
+    <ul class="grid" id="product-list"></ul>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">Tugas Fetch API &amp; DOM · Data dari dummyjson.com</div>
+  </footer>
+
+  <script src="js/index.js"></script>
+</body>
+</html>

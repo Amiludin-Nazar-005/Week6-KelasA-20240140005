@@ -1,0 +1,21 @@
+/* Dimuat setelah index.css */
+.layout { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2rem; align-items: start; }
+.panel { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.5rem; }
+.panel h2 { font-size: 1.05rem; margin-bottom: 1.1rem; }
+
+.field { display: grid; gap: .35rem; margin-bottom: 1.1rem; }
+.field label { font-weight: 700; font-size: .9rem; }
+.field input, .field select, .field textarea { font: inherit; padding: .7rem .9rem; border: 1px solid var(--line); border-radius: 10px; background: #fff; color: var(--ink); width: 100%; }
+.field textarea { resize: vertical; min-height: 96px; }
+.field.invalid input, .field.invalid textarea, .field.invalid select { border-color: var(--danger); }
+.hint { font-size: .8rem; color: var(--muted); display: flex; justify-content: space-between; }
+.error-msg { font-size: .82rem; color: var(--danger); min-height: 1.1em; }
+.actions { display: flex; gap: .6rem; }
+
+.output { white-space: pre-wrap; background: var(--bg); border-radius: 10px; padding: 1rem; min-height: 180px; font-size: .95rem; }
+.output.empty { color: var(--muted); }
+.feedback { margin-block: .9rem; font-size: .9rem; font-weight: 600; min-height: 1.3em; }
+.feedback.ok { color: var(--ok); }
+.feedback.fail { color: var(--danger); }
+
+@media (max-width: 760px) { .layout { grid-template-columns: 1fr; } }

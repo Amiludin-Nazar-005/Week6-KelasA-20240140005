@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Generator Caption</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/form.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <span class="brand">Etalase</span>
+      <nav class="nav" aria-label="Navigasi utama">
+        <a href="index.html">Etalase</a>
+        <a href="form.html" aria-current="page">Caption</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="page-head">
+      <h1>Buat caption produk</h1>
+      <p>Isi data produk, pilih gaya bahasa, lalu salin caption siap posting.</p>
+    </div>
+
+    <div class="layout">
+      <section class="panel">
+        <h2>Data produk</h2>
+        <form id="caption-form" novalidate>
+          <div class="field" data-field="name">
+            <label for="name">Nama produk</label>
+            <input type="text" id="name" name="name" placeholder="Contoh: Sepatu Lari Aero">
+            <span class="error-msg"></span>
+          </div>
+          <div class="field" data-field="price">
+            <label for="price">Harga (Rp)</label>
+            <input type="number" id="price" name="price" placeholder="150000" min="0">
+            <span class="error-msg"></span>
+          </div>
+          <div class="field" data-field="style">
+            <label for="style">Gaya bahasa</label>
+            <select id="style" name="style">
+              <option value="">Pilih gaya</option>
+              <option value="santai">Santai</option>
+              <option value="profesional">Profesional</option>
+              <option value="promo">Promo</option>
+            </select>
+            <span class="error-msg"></span>
+          </div>
+          <div class="field" data-field="desc">
+            <label for="desc">Keunggulan produk</label>
+            <textarea id="desc" name="desc" placeholder="Ringan, empuk, dan tahan lama."></textarea>
+            <span class="hint"><span class="error-msg"></span><span id="desc-count">0/120</span></span>
+          </div>
+          <div class="actions">
+            <button type="submit" class="btn">Buat caption</button>
+            <button type="reset" class="btn ghost" id="reset-btn">Reset</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="panel">
+        <h2>Hasil caption</h2>
+        <div class="output empty" id="output" aria-live="polite">Caption akan muncul di sini.</div>
+        <p class="feedback" id="feedback" role="status"></p>
+        <button class="btn ghost" id="copy-btn" type="button" hidden>Salin caption</button>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">Tugas Fetch API &amp; DOM · Form dengan validasi</div>
+  </footer>
+
+  <script src="js/form.js"></script>
+</body>
+</html>
